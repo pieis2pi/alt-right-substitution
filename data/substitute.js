@@ -1,4 +1,14 @@
 /*
+# ----------------------------------------------------------------------------
+# "THE BEER-WARE LICENSE":
+# <pieis2pi@u.washington.edu> wrote this file.  As long as you retain this
+# notice you can do whatever you want with this stuff. If we meet some day,
+# and you think this stuff is worth it, you can buy me a beer in return.
+# -Evan Thomas
+# ----------------------------------------------------------------------------
+*/
+
+/*
  * This file is responsible for performing the logic of replacing
  * all occurrences of each mapped word with its real counterpart.
  */
@@ -54,12 +64,12 @@ for (let word of mediaMap.keys()) {
 }
 
 /**
- * Substitutes emojis into text nodes.
+ * Substitutes into text nodes.
  * If the node contains more than just text (ex: it has child nodes),
  * call replaceText() on each of its children.
  *
  * @param  {Node} node    - The target DOM Node.
- * @return {void}         - Note: the emoji substitution is done inline.
+ * @return {void}         - Note: the substitution is done inline.
  */
 function replaceText (node) {
   // Setting textContent on a node removes all of its children and replaces
@@ -71,7 +81,7 @@ function replaceText (node) {
     // @see https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType.
 
     // Skip textarea nodes due to the potential for accidental submission
-    // of substituted emoji where none was intended.
+    // of substituted text where none was intended.
     if (node.parentNode &&
         node.parentNode.nodeName === 'TEXTAREA') {
       return;
