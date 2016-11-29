@@ -1,7 +1,7 @@
 {
   "title": "Alt-Right Substitution",
   "name": "alt-right-substitution",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Replaces media sanitised terms with true meanings.",
   "main": "index.js",
   "author": "Evan Thomas",
@@ -9,8 +9,8 @@
     "firefox": ">=38.0a1"
   },
   "icons": {
-    "48": "icons/icon.png",
-    "96": "icons/icon2x.png"
+    "48": "icon.png",
+    "96": "icon2x.png"
   },
   "license": "Beerware",
   "keywords": [
